@@ -17,13 +17,11 @@ const companyDetails = ({
     setcompanyDetails(data);
   }, [isOpen]);
 
-  console.log("companyDetails?.[0]", companyDetails?.[0]);
-
   return (
     <>
       <Modal size={"lg"} isOpen={isOpen} onClose={onClose}>
         <ModalContent>
-          {(onClose) => (
+          {() => (
             <>
               <ModalHeader className="flex flex-col gap-1">
                 {companyDetails?.[0]?.name}{" "}
